@@ -1,5 +1,5 @@
 import Content from "./ui/Content"
-import { Link, MainKit } from "./extensions"
+import { MainKit, Strike } from "./extensions"
 import { InkSlateProvider } from "./hooks/useInkSlate"
 import Toolbar from "./ui/Toolbar"
 
@@ -9,7 +9,7 @@ const extensions = [
             placeholder: 'Write something …'
         }
     }),
-    Link.configure({
+    Strike.configure({
         toolbar: true
     })
 ]
