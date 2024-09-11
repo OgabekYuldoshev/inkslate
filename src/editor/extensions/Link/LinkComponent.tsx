@@ -35,12 +35,12 @@ function Form({ editor, onClose }: { editor: Editor, onClose(): void, }) {
         <Input autoFocus type="url" name="link" placeholder="Enter" value={value} onChange={(e) => setValue(e.target.value)} />
       </div>
       <div className="ink-grid ink-grid-cols-2 ink-gap-x-1">
-        <Button type="button" onClick={handleClear}>
-          <Trash className="mr-2" size={18} />
+        <Button type="button" onClick={handleClear} variant={"outline"}>
+          <Trash className="ink-mr-2" size={18} />
           Clear
         </Button>
-        <Button type="submit">
-          <Check className="mr-2" size={18} />
+        <Button type="submit" >
+          <Check className="ink-mr-2" size={18} />
           Submit
         </Button>
       </div>
