@@ -15,8 +15,8 @@ export const Bold = TipTapBold.extend<BoldOptions>({
           component: ActionButton,
           props: {
             icon: "Bold",
-            onPressedChange: () => editor.commands.toggleBold(),
-            pressed: editor.isActive("bold") || false,
+            onClick: () => editor.commands.toggleBold(),
+            onActive: () => editor.isActive("bold") || false,
             disabled: !editor.can().toggleBold(),
           },
         };

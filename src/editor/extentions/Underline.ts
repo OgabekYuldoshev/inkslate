@@ -15,8 +15,8 @@ export const Underline = TipTapUnderline.extend<UnderlineOptions>({
           component: ActionButton,
           props: {
             icon: "Underline",
-            onPressedChange: () => editor.commands.toggleUnderline(),
-            pressed: editor.isActive("underline") || false,
+            onClick: () => editor.commands.toggleUnderline(),
+            onActive: () => editor.isActive("underline") || false,
             disabled: !editor.can().toggleUnderline(),
           },
         };

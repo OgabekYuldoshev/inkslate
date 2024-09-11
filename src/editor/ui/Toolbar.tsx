@@ -6,8 +6,6 @@ const Toolbar = () => {
 
   const items = useMemo(() => {
     const extensions = [...editor.extensionManager.extensions]
-
-
     const values = []
 
     for (const extension of extensions) {

@@ -1,8 +1,7 @@
 import Content from "./ui/Content"
-import { Bold, MainKit } from "./extentions"
+import { Highlight, MainKit } from "./extentions"
 import { InkSlateProvider } from "./hooks/useInkSlate"
-import Toolbar from "./ui/toolbar"
-import { Underline } from "./extentions/Underline"
+import Toolbar from "./ui/Toolbar"
 
 const extensions = [
     MainKit.configure({
@@ -10,10 +9,7 @@ const extensions = [
             placeholder: 'Write something …'
         }
     }),
-    Bold.configure({
-        toolbar: true
-    }),
-    Underline.configure({
+    Highlight.configure({
         toolbar: true
     })
 ]
@@ -22,7 +18,7 @@ const ReactInkSlate = () => {
     return (
         <div className="inkslate">
             <InkSlateProvider extensions={extensions}>
-                <Toolbar/>
+                <Toolbar />
                 <Content />
             </InkSlateProvider>
         </div>
