@@ -1,5 +1,5 @@
 import Content from "./ui/Content"
-import { Highlight, MainKit } from "./extensions"
+import { MainKit } from "./extensions"
 import { InkSlateProvider } from "./hooks/useInkSlate"
 import Toolbar from "./ui/Toolbar"
 
@@ -8,10 +8,6 @@ const extensions = [
         placeholder: {
             placeholder: 'Write something …'
         }
-    }),
-    Highlight.configure({
-        toolbar: true,
-        multicolor: true
     })
 ]
 

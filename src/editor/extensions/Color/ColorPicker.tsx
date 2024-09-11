@@ -2,7 +2,7 @@ import Picker from '@/components/color-picker'
 import { Button } from '@/components/ui/button'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { Editor } from '@tiptap/core'
-import { Highlighter } from 'lucide-react'
+import { PaintBucket } from 'lucide-react'
 import { useState } from 'react'
 
 type Props = {
@@ -11,15 +11,15 @@ type Props = {
     disabled: boolean
 }
 
-const HighlightPicker = ({ editor, disabled, onActive }: Props) => {
+const ColorPicker = ({ editor, disabled, onActive }: Props) => {
     const [isOpen, setOpen] = useState(false)
     function handleSelect(color: string) {
-        editor.chain().focus().setHighlight({ color }).run()
+        editor.chain().focus().setColor(color).run()
         setOpen(false)
     }
 
     function handleReset() {
-        editor.chain().focus().unsetHighlight().run()
+        editor.chain().focus().unsetColor().run()
         setOpen(false)
     }
 
@@ -34,7 +34,7 @@ const HighlightPicker = ({ editor, disabled, onActive }: Props) => {
                         e.preventDefault()
                         setOpen(true)
                     }}>
-                    <Highlighter size={18} />
+                    <PaintBucket size={18} />
                 </Button>
             </PopoverTrigger>
             <PopoverContent className='ink-bg-none ink-border-none ink-shadow-none ink-w-fit ink-p-0'>
@@ -48,4 +48,4 @@ const HighlightPicker = ({ editor, disabled, onActive }: Props) => {
     )
 }
 
-export default HighlightPicker
+export default ColorPicker
