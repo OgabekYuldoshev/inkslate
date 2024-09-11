@@ -6,6 +6,8 @@ export * from "./SubScript";
 export * from "./SuperScript";
 export * from "./Highlight";
 export * from "./Color";
+export * from "./Link";
+
 
 
 
