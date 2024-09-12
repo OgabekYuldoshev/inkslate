@@ -1,8 +1,8 @@
 import Content from "./ui/Content"
-import { MainKit, Table } from "./extensions"
+import { MainKit } from "./extensions"
 import { InkSlateProvider } from "./hooks/useInkSlate"
 import Toolbar from "./ui/Toolbar"
-import TableBubbleMenu from "./extensions/Table/TableBubbleMenu"
+import { UndoRedo } from "./extensions/UndoRedo"
 
 const extensions = [
     MainKit.configure({
@@ -10,7 +10,7 @@ const extensions = [
             placeholder: 'Write something …'
         }
     }),
-    Table.configure({
+    UndoRedo.configure({
         toolbar: true
     })
 ]
@@ -21,7 +21,6 @@ const ReactInkSlate = () => {
             <InkSlateProvider extensions={extensions}>
                 <Toolbar />
                 <Content />
-                <TableBubbleMenu/>
             </InkSlateProvider>
         </div>
     )
