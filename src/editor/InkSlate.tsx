@@ -1,7 +1,8 @@
 import Content from "./ui/Content"
-import { MainKit, Strike } from "./extensions"
+import { MainKit, Table } from "./extensions"
 import { InkSlateProvider } from "./hooks/useInkSlate"
 import Toolbar from "./ui/Toolbar"
+import TableBubbleMenu from "./extensions/Table/TableBubbleMenu"
 
 const extensions = [
     MainKit.configure({
@@ -9,7 +10,7 @@ const extensions = [
             placeholder: 'Write something …'
         }
     }),
-    Strike.configure({
+    Table.configure({
         toolbar: true
     })
 ]
@@ -20,6 +21,7 @@ const ReactInkSlate = () => {
             <InkSlateProvider extensions={extensions}>
                 <Toolbar />
                 <Content />
+                <TableBubbleMenu/>
             </InkSlateProvider>
         </div>
     )

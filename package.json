@@ -34,6 +34,10 @@
     "@tiptap/extension-strike": "^2.6.6",
     "@tiptap/extension-subscript": "^2.6.6",
     "@tiptap/extension-superscript": "^2.6.6",
+    "@tiptap/extension-table": "^2.6.6",
+    "@tiptap/extension-table-cell": "^2.6.6",
+    "@tiptap/extension-table-header": "^2.6.6",
+    "@tiptap/extension-table-row": "^2.6.6",
     "@tiptap/extension-text": "^2.6.6",
     "@tiptap/extension-text-style": "^2.6.6",
     "@tiptap/extension-underline": "^2.6.6",
@@ -49,6 +53,7 @@
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
+    "tippy.js": "^6.3.7",
     "use-debounce": "^10.0.3"
   },
   "devDependencies": {

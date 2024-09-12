@@ -8,9 +8,5 @@ export * from "./Highlight";
 export * from "./Color";
 export * from "./Link";
 export * from "./Strike";
-
-
-
-
-
+export * from "./Table";
 

@@ -1,9 +1,34 @@
 .inkslate {
-    p.is-editor-empty:first-child::before {
-      color: #adb5bd;
-      content: attr(data-placeholder);
-      float: left;
-      height: 0;
-      pointer-events: none;
+  p.is-editor-empty:first-child::before {
+    color: #adb5bd;
+    content: attr(data-placeholder);
+    float: left;
+    height: 0;
+    pointer-events: none;
+  }
+}
+
+$table-border-color: #ddd;
+$table-header-bg: #f8f9fa;
+$table-header-text: #333;
+$table-row-hover-bg: #f1f3f5;
+$table-row-alt-bg: #f7f7f9;
+$table-text-color: #444;
+$table-padding: 12px;
+$table-border-radius: 8px;
+
+
+.ProseMirror {
+  table {
+    @apply ink-border ink-border-collapse ink-table-fixed ink-box-border ink-w-full;
+
+    th,
+    td {
+      @apply ink-border ink-p-2 ink-align-top;
+    }
+
+    th {
+      @apply ink-font-bold ink-text-left;
     }
   }
+}
